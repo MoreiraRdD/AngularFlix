@@ -1,0 +1,12 @@
+<h1>Resultados para : {{pesquisado}}</h1>
+<div class="moviesContainer">
+    @for (movie of Search; track movie.id) {
+        <div class="movies">
+            <span>{{movie.title}}</span>
+            <a [routerLink]="['/movie', movie.id]" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <img [src]="movieService.getFullImageUrl(movie.poster_path)" alt="Image" id="img-pesquisa">
+            </a>
+            
+        </div>
+}
+</div>

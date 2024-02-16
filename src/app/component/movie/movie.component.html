@@ -1,0 +1,49 @@
+<div class="container">
+        <div class="list-container">
+            <h3>Populares no Momento</h3>
+        <p-carousel [value]="Popular" [numVisible]="6" [numScroll]="2" [circular]="true">
+            <ng-template let-movie pTemplate="item" >
+
+                <a [routerLink]="['/movie', movie.id]">
+                    <img class="movie-item-image" [src]="movieService.getFullImageUrl(movie.poster_path)" alt="Image">
+
+                </a>
+            </ng-template>
+        </p-carousel>
+        </div>
+        
+        <div class="list-container">
+            <h3>Melhores Avaliações</h3>
+        <p-carousel [value]="TopRated" [numVisible]="6" [numScroll]="2" [circular]="true">
+            <ng-template let-movie pTemplate="item" >
+                <a [routerLink]="['/movie', movie.id]">
+                    <img class="movie-item-image" [src]="movieService.getFullImageUrl(movie.poster_path)" alt="Image">
+                </a>
+            </ng-template>
+        </p-carousel>
+        </div>
+
+        <div class="list-container">
+            <h3>Nos Cinemas</h3>
+        <p-carousel [value]="NowPlaying" [numVisible]="6" [numScroll]="2" [circular]="true" >
+            <ng-template let-movie pTemplate="item" >
+                <a [routerLink]="['/movie', movie.id]">
+                   <img class="movie-item-image"  [src]="movieService.getFullImageUrl(movie.poster_path)" alt="Image">
+                </a>
+            </ng-template>
+        </p-carousel>
+        </div>
+        
+        <div class="list-container">
+            <h3>Próximos Lançamentos</h3>
+        <p-carousel [value]="Upcomig" [numVisible]="6" [numScroll]="2" [circular]="true">
+            <ng-template let-movie pTemplate="item" >
+                <a [routerLink]="['/movie', movie.id]">
+                    <img class="movie-item-image" [src]="movieService.getFullImageUrl(movie.poster_path)" alt="Image">
+                </a>
+            </ng-template>
+        </p-carousel>
+        </div>
+        
+      
+</div>

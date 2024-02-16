@@ -1,0 +1,54 @@
+*{
+    color: rgb(216, 19, 19);
+    text-decoration: none;
+}
+
+
+#menuBar {
+    height: 8vh;
+    background-color: #0c0d0d;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3vw;
+    cursor: pointer;
+}
+
+#logo img {
+    height: 10vh;
+}
+
+
+#pesquisa {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#barra-pesquisa{
+    width: 13vw;
+    height: 1.5vw;
+    outline: none;
+}
+
+#botao-pesquisa{
+    display: flex;
+    height: 1.5vw;
+    width: 3vw;
+    border: none; 
+    background-color: #da1103; 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 5vw;
+}
+#botao-pesquisa img{
+    width: 1.1vw;
+}

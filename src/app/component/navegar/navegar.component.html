@@ -1,0 +1,10 @@
+<div id="menuBar">
+    <div id="logo">
+        <img src="../../../assets/AngularFlix.png"  routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">
+    </div>
+
+    <div id="pesquisa">
+<input type="search" [(ngModel)]="pesquisa" placeholder="Pesquise aqui" id="barra-pesquisa">
+<button [routerLink]="['/pesquisa', pesquisa]" id="botao-pesquisa"><img src="../../../assets/Pesquisa.png" alt=""></button>
+    </div>
+</div>

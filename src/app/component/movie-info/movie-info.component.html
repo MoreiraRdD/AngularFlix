@@ -1,0 +1,52 @@
+<div class="Container">
+    <div class="moviesContainer">
+
+        <div id="apresentation">
+            <div id="image">
+                <img [src]="getFullImageUrl(movie.poster_path)" alt="Image">
+            </div>
+            
+            <div id="movie-Informations">
+                <h3>Título: {{movie.title}}</h3>
+                <h3>Título Original: {{movie.original_title}}</h3>
+                <h3>Sinopse: {{movie.overview}}</h3>
+                <h3>Popularidade: {{movie.popularity}}</h3>
+                <h3>Lançamento: {{movie.release_date}}</h3>
+                <h3>Nota: {{movie.vote_average}}</h3>
+                
+            </div>
+
+        </div>
+
+        <div id="Elenco">
+            <h2>Elenco</h2>
+            <p-carousel [value]="credits" [numVisible]="16" [numScroll]="2" [circular]="true">
+                <ng-template let-cast pTemplate="item" >
+                        <div id="castContent">
+                            <img class="movie-item-image" [src]="movieService.getFullImageUrl(cast.profile_path)" alt="Image">
+                            <span id="actorName">{{cast.name}}</span>
+                            <span id="character">{{cast.character}}</span>
+                        </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+
+</div>
+
+<div id="similaresContainer">
+    <h2>Filmes Similares</h2>
+
+    <div id="similares">
+        @for (movie of similars; track movie.id) {
+            <div class="movies">
+                <span>{{movie.title}}</span>
+                <a [routerLink]="['/movie', movie.id]">
+                    <img class="movie-item-image" [src]="movieService.getFullImageUrl(movie.poster_path)" alt="Image">
+                </a>
+                
+            </div>
+    }
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,18 @@
+.moviesContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movies{
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    width: 12vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies img{
+    width: 12vw;
+    margin-top: 1vw;
+}
